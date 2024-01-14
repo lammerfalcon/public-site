@@ -133,12 +133,6 @@ const shuffleIcons = () => {
   transition: transform 1s;
 }
 
-.icon {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-}
-
 /* 1. declare transition */
 .fade-move,
 .fade-enter-active,
