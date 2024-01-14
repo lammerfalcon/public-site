@@ -11,20 +11,20 @@
         align="left"
     >
       <TransitionGroup tag="div" name="fade" class="grid-cols-3 grid place-items-center gap-y-6">
-        <div v-for="item in shuffledIcons" class="" :key="item">
+        <div v-for="(item, index) in icons" class="" :key="item">
 
-          <UTooltip>
-            <template #text>
+          <NuxtLink external :to="item.link">
+            <UTooltip>
+              <template #text>
               <span class="flex items-center gap-1">{{ item.title }}
                 <UIcon
                     class="text-green-400"
                     name="i-formkit-linkexternal"></UIcon>
               </span>
-            </template>
-            <NuxtLink external :to="item.link">
+              </template>
               <UIcon :name="item.name" class="text-5xl"/>
-            </NuxtLink>
-          </UTooltip>
+            </UTooltip>
+          </NuxtLink>
         </div>
       </TransitionGroup>
     </LandingSection>
