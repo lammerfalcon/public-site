@@ -3,7 +3,10 @@
 </script>
 
 <template>
-blog
+  <UContainer>
+
+    blog
+  </UContainer>
 </template>
 
 <style scoped>

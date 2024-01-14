@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     devtools: {enabled: true},
-    extends: ['@nuxt/ui-pro'],
+    // extends: ['@nuxt/ui-pro'],
     modules: [
         '@nuxt/ui',
         '@nuxtjs/google-fonts'
@@ -10,7 +10,7 @@ export default defineNuxtConfig({
         preference: 'system',
     },
     ui: {
-        icons: ['logos', 'simple-icons', 'mdi'],
+        icons: ['logos', 'simple-icons', 'mdi', 'majesticons', 'formkit'],
     },
     googleFonts: {
         download: true,
@@ -22,7 +22,7 @@ export default defineNuxtConfig({
         families: {
             'Karla': {
                 wght: [400, 600, 700],
-                ital: [200,400, 600, 700],
+                ital: [200, 400, 600, 700],
             },
         },
     },
