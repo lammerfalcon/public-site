@@ -11,7 +11,7 @@
         align="left"
     >
       <TransitionGroup tag="div" name="fade" class="grid-cols-3 grid place-items-center gap-y-6">
-        <div v-for="(item, index) in icons" class="" :key="item">
+        <div v-for="(item, index) in icons" class="" :key="index">
 
           <NuxtLink external :to="item.link">
             <UTooltip>
