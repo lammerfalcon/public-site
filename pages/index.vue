@@ -22,8 +22,7 @@
               </span>
             </template>
             <NuxtLink external :to="item.link">
-
-              <UIcon :name="item.name" class="icon"/>
+              <UIcon :name="item.name" class="text-5xl"/>
             </NuxtLink>
           </UTooltip>
         </div>
