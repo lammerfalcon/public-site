@@ -11,20 +11,20 @@
         align="left"
     >
       <TransitionGroup tag="div" name="fade" class="grid-cols-3 grid place-items-center gap-y-6">
-        <div v-for="(item, index) in icons" class="" :key="index">
+        <div v-for="item in shuffledIcons" class="" :key="item">
 
-          <NuxtLink external :to="item.link">
-            <UTooltip>
-              <template #text>
+          <UTooltip>
+            <template #text>
               <span class="flex items-center gap-1">{{ item.title }}
                 <UIcon
                     class="text-green-400"
                     name="i-formkit-linkexternal"></UIcon>
               </span>
-              </template>
-              <UIcon :name="item.name" class="text-5xl"/>
-            </UTooltip>
-          </NuxtLink>
+            </template>
+            <NuxtLink external :to="item.link">
+              <Icon :name="item.name" class="text-5xl"/>
+            </NuxtLink>
+          </UTooltip>
         </div>
       </TransitionGroup>
     </LandingSection>
@@ -46,13 +46,10 @@
         description="We've built a strong, lasting partnership. Their trust is our driving force, propelling us towards shared success."
         :card="true"
     />
-
-
   </UContainer>
 </template>
 <script setup lang="ts">
 import LandingSection from "~/components/landing/LandingSection.vue";
-import LandingLogos from "~/components/landing/LandingLogos.vue";
 
 const icons = [
   {

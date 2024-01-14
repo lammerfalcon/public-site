@@ -1,5 +1,6 @@
 <script setup>
 import ColorModeToggle from "~/components/colorMode/ColorModeToggle.vue";
+import ColorModeButton from "~/components/colorMode/ColorModeButton.vue";
 
 const links = [
   {
@@ -48,6 +49,7 @@ const links = [
       </div>
       <div class="flex items-center justify-end lg:flex-1 gap-1.5">
         <!--        <ColorModeToggle></ColorModeToggle>-->
+        <ColorModeButton></ColorModeButton>
       </div>
     </UContainer>
   </header>
