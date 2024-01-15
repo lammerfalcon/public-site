@@ -1,9 +1,11 @@
 <script setup lang="ts">
-
+definePageMeta({
+  title: 'Contact'
+})
 </script>
 
 <template>
-contact
+  contact
 </template>
 
 <style scoped>

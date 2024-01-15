@@ -51,6 +51,9 @@
 <script setup lang="ts">
 import LandingSection from "~/components/landing/LandingSection.vue";
 
+definePageMeta({
+  title: 'About'
+})
 const icons = [
   {
     name: 'i-logos-javascript',
