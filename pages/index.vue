@@ -30,10 +30,34 @@
     </LandingSection>
     <LandingGrid>
 
-      <LandingCard class="col-span-6 row-span-2" icon="i-heroicons-swatch" title="Color Palette"
-                   description="Choose a primary and a gray color from your Tailwind CSS color palette."/>
+      <LandingCard class="col-span-6 row-span-2" icon="i-heroicons-swatch"
+                   description="Leading frontend team — Creating SaaS apps — Affiliate marketing software — CRM system">
+        <template #icon>
+          <img class="" width="140px" src="https://group-collective.com/assets/main-screen-image-d8061a45.webp">
+        </template>
+        <template #title>
+          <NuxtLink class="hover:text-primary flex gap-1 items-center" to="https://group-collective.com/">
+            <span>Group Collective</span>
+            <UIcon
+                class="text-xs"
+                name="i-formkit-linkexternal"></UIcon>
+          </NuxtLink>
+        </template>
+      </LandingCard>
       <LandingCard class="col-span-6 row-span-4" icon="i-heroicons-wrench-screwdriver" title="Fully Customizable"
-                   description="Change the style of any component in your App Config or with ui prop."/>
+                   description="Change the style of any component in your App Config or with ui prop.">
+        <template #icon>
+          <img class="bg-white p-4 rounded-2xl" src="https://rang.ai/assets/public/i/logo.svg" alt="">
+        </template>
+        <template #title>
+          <NuxtLink class="hover:text-primary flex gap-1 items-center" to="https://rang.ai/">
+            <span>Rang.ai</span>
+            <UIcon
+                class="text-xs"
+                name="i-formkit-linkexternal"></UIcon>
+          </NuxtLink>
+        </template>
+      </LandingCard>
       <LandingCard class="col-span-6 row-span-4" icon="i-heroicons-face-smile" title="Icons"
                    description="Choose any of the 100k+ icons from the most popular icon libraries."/>
       <LandingCard class="col-span-6 row-span-2" icon="i-heroicons-computer-desktop" title="Keyboard Shortcuts"
