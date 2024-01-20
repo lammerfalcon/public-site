@@ -3,10 +3,10 @@ import MainHeader from "~/components/layout/MainHeader.vue";
 import MainFooter from "~/components/layout/MainFooter.vue";
 
 useServerSeoMeta({
-  title: 'Vue | Nuxt developer',
-  ogTitle: 'Vue | Nuxt developer',
-  description: 'As a developer specializing in Vue and Nuxt, I focus on creating efficient, scalable web solutions that prioritize user experience.',
-  ogDescription: 'As a developer specializing in Vue and Nuxt, I focus on creating efficient, scalable web solutions that prioritize user experience.',
+  title: 'Rodion Gavrilov',
+  ogTitle: 'Rodion Gavrilov',
+  description: 'Creating efficient, scalable web solutions that prioritize user experience',
+  ogDescription: 'Creating efficient, scalable web solutions that prioritize user experience',
   ogImage: 'https://avatars.githubusercontent.com/u/47675540?v=4',
   twitterCard: 'summary_large_image',
 })

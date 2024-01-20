@@ -7,18 +7,19 @@ const links = [
     label: 'About',
     icon: 'i-heroicons-book-open',
     to: '/'
+
   },
 
   {
     label: 'Blog',
     icon: 'i-heroicons-book-open',
-    to: '/blog'
+    disabled: true,
   },
 
   {
     label: 'Contact',
     icon: 'i-heroicons-book-open',
-    to: '/contact'
+    disabled: true,
   },
 ]
 </script>
@@ -40,10 +41,13 @@ const links = [
       </div>
       <div>
         <ul class="flex items-center gap-x-8">
-          <li v-for="(link, index) in links" :key="index">
-            <ULink active-class="text-primary" inactive-class="hover:text-primary"
-                   class="text-sm/6 font-semibold flex items-center gap-1" :to="link.to">{{ link.label }}
-            </ULink>
+          <li v-for="(link, index) in links" :class="link.disabled ? 'cursor-not-allowed':''" :key="index">
+            <NuxtLink rel="''" active-class="text-primary" inactive-class="hover:text-primary"
+                      class="text-sm/6 font-semibold flex items-center gap-1"
+                      :class="link.disabled ? 'pointer-events-none': ''"
+                      :disabled="link.disabled" :to="link.to">
+              {{ link.label }}
+            </NuxtLink>
           </li>
         </ul>
       </div>

@@ -1,14 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import {getIconCollections} from "@egoist/tailwindcss-icons";
+import {getIconCollections} from '@egoist/tailwindcss-icons'
 
 export default defineNuxtConfig({
     devtools: {enabled: true},
     // extends: ['@nuxt/ui-pro'],
-    modules: [
-        '@nuxt/ui',
-        '@nuxtjs/google-fonts',
-        'nuxt-icon'
-    ],
+    modules: ['@nuxt/ui', '@nuxtjs/google-fonts', 'nuxt-icon', '@nuxt/image', 'nuxt-og-image'],
     colorMode: {
         preference: 'system',
     },
@@ -23,7 +19,7 @@ export default defineNuxtConfig({
         preconnect: true,
         preload: true,
         families: {
-            'Karla': {
+            Karla: {
                 wght: [400, 600, 700],
                 ital: [200, 400, 600, 700],
             },

@@ -2,10 +2,11 @@
 definePageMeta({
   title: 'Contact'
 })
+navigateTo('/')
 </script>
 
 <template>
-  contact
+  <div>hello</div>
 </template>
 
 <style scoped>

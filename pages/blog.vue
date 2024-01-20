@@ -2,6 +2,8 @@
 definePageMeta({
   title: 'Blog'
 })
+navigateTo('/')
+
 </script>
 
 <template>

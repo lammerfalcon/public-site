@@ -1,10 +1,10 @@
 <template>
   <div
       ref="el"
-      :style="{
-      '--x': `${elementX}px`,
-      '--y': `${elementY}px`,
-    }"
+      :style=" isClient ? {
+        '--x': `${elementX}px`,
+        '--y': `${elementY}px`,
+      } : {}"
       :class="[ui.wrapper, to && ui.to]"
       v-bind="attrs"
   >
@@ -48,10 +48,19 @@ import colors from '#tailwind-config/theme/colors'
 import {card as cardConfig} from '#ui/ui.config'
 
 const el = ref<HTMLDivElement>()
+const isClient = ref(false)
 
 const slots = useSlots()
-const {elementX, elementY} = useSharedMouseInElement(el)
+let elementX = ref(0)
+let elementY = ref(0)
 
+onMounted(() => {
+  isClient.value = true;
+  // Используйте функцию useSharedMouseInElement только на клиенте
+  const mouseCoords = useSharedMouseInElement(el)
+  elementX = mouseCoords.elementX
+  elementY = mouseCoords.elementY
+})
 defineOptions({
   inheritAttrs: false
 })
