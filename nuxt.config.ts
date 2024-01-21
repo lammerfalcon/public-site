@@ -8,6 +8,9 @@ export default defineNuxtConfig({
     colorMode: {
         preference: 'system',
     },
+    site: {
+        url: 'https://www.rodiongavrilov.com/'
+    },
     ui: {
         icons: ['logos', 'simple-icons', 'mdi', 'majesticons', 'formkit'],
     },
