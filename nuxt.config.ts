@@ -14,6 +14,14 @@ export default defineNuxtConfig({
     ui: {
         icons: ['logos', 'simple-icons', 'mdi', 'majesticons', 'formkit'],
     },
+    ogImage: {
+        compatibility: {
+            prerender: {
+                chromium: 'node',
+                satori: false,
+            },
+        }
+    },
     googleFonts: {
         download: true,
         inject: true,
