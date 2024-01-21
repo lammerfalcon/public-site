@@ -2,6 +2,7 @@
 import LandingSection from '~/components/landing/LandingSection.vue'
 
 
+defineOgImageScreenshot()
 definePageMeta({
   title: 'About'
 })

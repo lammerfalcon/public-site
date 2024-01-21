@@ -2,7 +2,6 @@
 import MainHeader from "~/components/layout/MainHeader.vue";
 import MainFooter from "~/components/layout/MainFooter.vue";
 
-defineOgImageScreenshot()
 
 useServerSeoMeta({
   title: 'Rodion Gavrilov',
