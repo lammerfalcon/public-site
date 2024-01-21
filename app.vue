@@ -9,7 +9,6 @@ useServerSeoMeta({
   ogTitle: 'Rodion Gavrilov',
   description: 'Creating efficient, scalable web solutions that prioritize user experience',
   ogDescription: 'Creating efficient, scalable web solutions that prioritize user experience',
-  ogImage: 'https://avatars.githubusercontent.com/u/47675540?v=4',
   twitterCard: 'summary_large_image',
 })
 </script>

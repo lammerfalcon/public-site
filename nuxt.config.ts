@@ -9,7 +9,8 @@ export default defineNuxtConfig({
         preference: 'system',
     },
     site: {
-        url: 'https://www.rodiongavrilov.com/'
+        url: 'https://rodiongavrilov.com',
+        name: 'Rodion Gavrilov',
     },
     ui: {
         icons: ['logos', 'simple-icons', 'mdi', 'majesticons', 'formkit'],
