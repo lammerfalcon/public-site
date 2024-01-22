@@ -1,47 +1,39 @@
 <script setup lang="ts">
+import SocialLink from './SocialLink.vue'
 
+interface ISocialLink {
+  url: string
+  icon: string
+}
+
+const socialLinks: ISocialLink[] = [
+  {
+    url: 'https://t.me/lammerfalcon',
+    icon: 'i-simple-icons-telegram',
+  },
+  {
+    url: 'https://www.linkedin.com/in/rodion-gavrilov',
+    icon: 'i-simple-icons-linkedin',
+  },
+  {
+    url: 'https://www.instagram.com/gavrilov_rodion/',
+    icon: 'i-simple-icons-instagram',
+  },
+  {
+    url: 'https://github.com/lammerfalcon',
+    icon: 'i-simple-icons-github',
+  },
+]
 </script>
 
 <template>
-  <div id="contact" class="border border-primary flex p-2 rounded-2xl items-center justify-center  gap-2">
+  <div id="contact" class="border border-primary flex p-2 rounded-2xl items-center justify-center gap-2">
     <div>Socials:</div>
     <div class="flex flex-row gap-2 text-3xl md:text-2xl">
-      <NuxtLink
-        target="_blank"
-        class="hover:text-primary underline underline-primary flex  items-center justify-center"
-        external
-        to="https://t.me/lammerfalcon"
-      >
-        <UIcon name="i-simple-icons-telegram" />
-      </NuxtLink>
-      <NuxtLink
-        target="_blank"
-        class="hover:text-primary underline underline-primary flex  items-center justify-center"
-        external
-        to="https://www.linkedin.com/in/rodion-gavrilov"
-      >
-        <UIcon name="i-simple-icons-linkedin" />
-      </NuxtLink>
-      <NuxtLink
-        target="_blank"
-        class="hover:text-primary underline underline-primary flex  items-center justify-center"
-        external
-        to="https://www.instagram.com/gavrilov_rodion/"
-      >
-        <UIcon name="i-simple-icons-instagram" />
-      </NuxtLink>
-      <NuxtLink
-        target="_blank"
-        class="hover:text-primary underline underline-primary flex  items-center justify-center"
-        external
-        to="https://github.com/lammerfalcon"
-      >
-        <UIcon name="i-simple-icons-github" />
-      </NuxtLink>
+      <SocialLink
+        v-for="socialLink in socialLinks" :key="socialLink.icon" :url="socialLink.url"
+        :icon="socialLink.icon"
+      />
     </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>
