@@ -59,3 +59,4 @@ const { ui, attrs } = useUI('footer', toRef(props, 'ui'), config, toRef(props, '
     </div>
   </footer>
 </template>
+no

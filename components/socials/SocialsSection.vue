@@ -9,7 +9,7 @@
       <NuxtLink
         class="hover:text-primary underline underline-primary flex  items-center justify-center"
         external
-        to="https://www.instagram.com/gavrilov_rodion/"
+        to="https://t.me/lammerfalcon"
       >
         <UIcon name="i-simple-icons-telegram" />
       </NuxtLink>
@@ -23,7 +23,7 @@
       <NuxtLink
         class="hover:text-primary underline underline-primary flex  items-center justify-center"
         external
-        to="https://t.me/lammerfalcon"
+        to="https://www.instagram.com/gavrilov_rodion/"
       >
         <UIcon name="i-simple-icons-instagram" />
       </NuxtLink>
