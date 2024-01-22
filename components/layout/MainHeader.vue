@@ -9,20 +9,17 @@ const links = [
     to: '/'
 
   },
-
   {
     label: 'Blog(soon)',
     icon: 'i-heroicons-book-open',
     disabled: true,
-
     to: '/blog',
   },
 
   {
-    label: 'Contact',
+    label: 'Socials',
     icon: 'i-heroicons-book-open',
-    hash: '#contact',
-    to: '/',
+    to: '/socials',
   },
 ]
 </script>
@@ -45,12 +42,11 @@ const links = [
       <div>
         <ul class="flex items-center gap-x-8">
           <li v-for="(link, index) in links" :class="link.disabled ? 'cursor-not-allowed':''" :key="index">
-            <NuxtLink rel="''" active-class="text-primary" inactive-class="hover:text-primary"
-                      class="text-sm/6 font-semibold flex items-center gap-1"
-                      :class="link.disabled ? 'pointer-events-none': ''"
+            <NuxtLink rel="''" active-class="text-primary" inactive-class="hover:text-primary "
+                      class="text-sm/6 font-semibold flex items-center gap-1 text-gray-500"
+                      :class="link.disabled ? 'pointer-events-none text-gray-400': ''"
                       :disabled="link.disabled" :to="{
                         path: link.to,
-                        hash: link.hash
                       }">
               {{ link.label }}
             </NuxtLink>

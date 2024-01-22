@@ -3,7 +3,6 @@ import {getIconCollections} from '@egoist/tailwindcss-icons'
 
 export default defineNuxtConfig({
     devtools: {enabled: true},
-    // extends: ['@nuxt/ui-pro'],
     modules: ['@nuxt/ui', '@nuxtjs/google-fonts', 'nuxt-icon', '@nuxt/image', 'nuxt-og-image'],
     colorMode: {
         preference: 'system',

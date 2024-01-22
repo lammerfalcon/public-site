@@ -13,15 +13,16 @@ useServerSeoMeta({
 </script>
 <template>
   <MainHeader/>
-  <NuxtPage/>
+  <div class="min-h-[calc(100vh-60px)]">
+    <NuxtPage/>
+  </div>
   <MainFooter>
     <template #left>
       Copyright © {{ new Date().getFullYear() }}
     </template>
     <template #right>
 
-      <UButton icon="i-simple-icons-github" color="gray" variant="ghost" to="https://github.com/lammerfalcon"
-               target="_blank"/>
+      <p class="text-gray-500">Build with Nuxt 3</p>
     </template>
   </MainFooter>
 </template>

@@ -1,0 +1,29 @@
+<script setup lang="ts">
+import SocialsSection from "~/components/socials/SocialsSection.vue";
+import LandingSection from "~/components/landing/LandingSection.vue";
+
+definePageMeta({
+  title: 'Socials'
+})
+</script>
+
+<template>
+  <LandingSection title="Feel free to contact me">
+    <template #description>
+      <div class="flex flex-col gap-4 items-center">
+        <div class="flex items-center">
+          <span>
+          Currently on Cyprus, Limassol
+          </span>
+          <UIcon class="text-primary" name="i-mdi-location"></UIcon>
+        </div>
+        <SocialsSection></SocialsSection>
+
+      </div>
+    </template>
+  </LandingSection>
+</template>
+
+<style scoped>
+
+</style>
