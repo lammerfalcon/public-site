@@ -2,3 +2,13 @@ dist
 node_modules
 .output
 .nuxt
+.storybook
+storybook-static
+coverage
+.DS_Store
+.md
+package.json
+graphql
+components.d.ts
+src-tauri
+auto-imports.d.ts

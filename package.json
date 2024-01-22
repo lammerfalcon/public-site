@@ -1,28 +1,32 @@
 {
   "name": "nuxt-app",
-  "private": true,
   "type": "module",
+  "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@nuxtjs/google-fonts": "^3.1.3",
-    "nuxt": "^3.8.2",
-    "nuxt-og-image": "^3.0.0-rc.27",
-    "vue": "^3.3.13",
-    "vue-router": "^4.2.5"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@nuxt/image": "1.3.0",
     "@iconify/json": "^2.2.168",
+    "@nuxt/image": "1.3.0",
     "@nuxt/ui": "^2.12.0",
     "@nuxt/ui-pro": "^0.7.0",
     "@vercel/analytics": "^1.1.1",
     "nuxt-icon": "^0.6.8",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "1.2.1",
+    "@nuxtjs/google-fonts": "^3.1.3",
+    "eslint": "^8.51.0",
+    "nuxt": "^3.8.2",
+    "nuxt-og-image": "^3.0.0-rc.27",
+    "vue": "^3.3.13",
+    "vue-router": "^4.2.5"
   }
 }

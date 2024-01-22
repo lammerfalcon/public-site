@@ -1,37 +1,10 @@
-<template>
-  <UCard :class="ui.wrapper" v-bind="attrs" :ui="ui">
-    <div :class="[align === 'center' && 'text-center', align === 'right' && 'lg:order-last']">
-      <h2 v-if="title || $slots.title" :class="ui.title">
-        <slot name="title">
-          {{ title }}
-        </slot>
-      </h2>
-
-      <p v-if="description || $slots.description" :class="ui.description">
-        <slot name="description">
-          {{ description }}
-        </slot>
-      </p>
-
-      <div v-if="links?.length || $slots.links" :class="[ui.links, align === 'center' && 'justify-center']">
-        <slot name="links">
-          <UButton v-for="(link, index) in links" :key="index" v-bind="link" @click="link.click"/>
-        </slot>
-      </div>
-    </div>
-
-    <slot v-if="$slots.default"/>
-    <div v-else-if="align === 'right'"/>
-  </UCard>
-</template>
-
 <script setup lang="ts">
-import type {Button} from '#ui/types'
-import {twJoin} from 'tailwind-merge'
-import {card as cardConfig} from '#ui/ui.config'
+import { twJoin } from 'tailwind-merge'
+import type { Button } from '#ui/types'
+import type { card as cardConfig } from '#ui/ui.config'
 
 defineOptions({
-  inheritAttrs: false
+  inheritAttrs: false,
 })
 
 const props = withDefaults(defineProps<{
@@ -49,7 +22,7 @@ const props = withDefaults(defineProps<{
   links: () => [],
   align: 'center',
   ui: () => ({}),
-  class: undefined
+  class: undefined,
 })
 
 const config = computed(() => {
@@ -57,7 +30,8 @@ const config = computed(() => {
 
   if (props.card) {
     card.rounded = 'rounded-xl'
-  } else {
+  }
+  else {
     card.ring = ''
     card.rounded = ''
     card.background = ''
@@ -66,9 +40,9 @@ const config = computed(() => {
   }
 
   const base = twJoin(
-      'flex flex-col',
-      props.align !== 'center' && 'lg:grid lg:grid-cols-2 lg:items-center',
-      'gap-16 sm:gap-y-24'
+    'flex flex-col',
+    props.align !== 'center' && 'lg:grid lg:grid-cols-2 lg:items-center',
+    'gap-16 sm:gap-y-24',
   )
 
   const padding: string = props.card ? 'py-24 sm:py-32 sm:px-16' : 'py-24 sm:py-32 px-6 lg:px-8'
@@ -78,13 +52,40 @@ const config = computed(() => {
     wrapper: 'relative',
     body: {
       base,
-      padding
+      padding,
     },
     title: 'text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl',
     description: 'mt-6 text-lg/8 text-gray-600 dark:text-gray-300',
-    links: 'mt-10 flex items-center gap-x-6'
+    links: 'mt-10 flex items-center gap-x-6',
   }
 })
 
-const {ui, attrs} = useUI('landing.cta', toRef(props, 'ui'), config, toRef(props, 'class'), true)
+const { ui, attrs } = useUI('landing.cta', toRef(props, 'ui'), config, toRef(props, 'class'), true)
 </script>
+
+<template>
+  <UCard :class="ui.wrapper" v-bind="attrs" :ui="ui">
+    <div :class="[align === 'center' && 'text-center', align === 'right' && 'lg:order-last']">
+      <h2 v-if="title || $slots.title" :class="ui.title">
+        <slot name="title">
+          {{ title }}
+        </slot>
+      </h2>
+
+      <p v-if="description || $slots.description" :class="ui.description">
+        <slot name="description">
+          {{ description }}
+        </slot>
+      </p>
+
+      <div v-if="links?.length || $slots.links" :class="[ui.links, align === 'center' && 'justify-center']">
+        <slot name="links">
+          <UButton v-for="(link, index) in links" :key="index" v-bind="link" @click="link.click" />
+        </slot>
+      </div>
+    </div>
+
+    <slot v-if="$slots.default" />
+    <div v-else-if="align === 'right'" />
+  </UCard>
+</template>

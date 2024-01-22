@@ -1,14 +1,12 @@
 <script setup lang="ts">
 definePageMeta({
-  title: 'Blog'
+  title: 'Blog',
 })
 navigateTo('/')
-
 </script>
 
 <template>
   <UContainer>
-
     blog
   </UContainer>
 </template>
