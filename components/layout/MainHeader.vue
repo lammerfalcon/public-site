@@ -11,15 +11,18 @@ const links = [
   },
 
   {
-    label: 'Blog',
+    label: 'Blog(soon)',
     icon: 'i-heroicons-book-open',
     disabled: true,
+
+    to: '/blog',
   },
 
   {
     label: 'Contact',
     icon: 'i-heroicons-book-open',
-    disabled: true,
+    hash: '#contact',
+    to: '/',
   },
 ]
 </script>
@@ -45,7 +48,10 @@ const links = [
             <NuxtLink rel="''" active-class="text-primary" inactive-class="hover:text-primary"
                       class="text-sm/6 font-semibold flex items-center gap-1"
                       :class="link.disabled ? 'pointer-events-none': ''"
-                      :disabled="link.disabled" :to="link.to">
+                      :disabled="link.disabled" :to="{
+                        path: link.to,
+                        hash: link.hash
+                      }">
               {{ link.label }}
             </NuxtLink>
           </li>

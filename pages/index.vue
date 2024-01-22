@@ -234,22 +234,31 @@ const icons = [
           </span>
             <UIcon class="text-primary" name="i-mdi-location"></UIcon>
           </div>
-          <div class="flex gap-2">Socials:
-            <NuxtLink class="hover:text-primary underline underline-primary" external
-                      to="https://t.me/lammerfalcon">
-              <UIcon name="i-simple-icons-instagram"></UIcon>
-            </NuxtLink>
+          <div id="contact" class="border border-primary flex p-2 rounded-2xl items-center justify-center  gap-2">
+            <div>Socials:</div>
+            <div class="flex flex-row gap-2">
 
-            <NuxtLink class="hover:text-primary underline underline-primary" external
-                      to="https://www.instagram.com/">
-              <UIcon name="i-simple-icons-telegram"></UIcon>
-
-            </NuxtLink>
-            <NuxtLink class="hover:text-primary underline underline-primary" external
-                      to="https://github.com/lammerfalcon">
-              <UIcon name="i-simple-icons-github"></UIcon>
-
-            </NuxtLink>
+              <NuxtLink class="hover:text-primary underline underline-primary flex  items-center justify-center"
+                        external
+                        to="https://www.instagram.com/gavrilov_rodion/">
+                <UIcon name="i-simple-icons-telegram"></UIcon>
+              </NuxtLink>
+              <NuxtLink class="hover:text-primary underline underline-primary flex  items-center justify-center"
+                        external
+                        to="https://www.linkedin.com/in/rodion-gavrilov">
+                <UIcon name="i-simple-icons-linkedin"></UIcon>
+              </NuxtLink>
+              <NuxtLink class="hover:text-primary underline underline-primary flex  items-center justify-center"
+                        external
+                        to="https://t.me/lammerfalcon">
+                <UIcon name="i-simple-icons-instagram"></UIcon>
+              </NuxtLink>
+              <NuxtLink class="hover:text-primary underline underline-primary flex  items-center justify-center"
+                        external
+                        to="https://github.com/lammerfalcon">
+                <UIcon name="i-simple-icons-github"></UIcon>
+              </NuxtLink>
+            </div>
 
           </div>
           <div>Hobbies: cooking 🍳, guitar 🎸, video games 🎮, travelling ✈️, mechanical keyboards ⌨️</div>
