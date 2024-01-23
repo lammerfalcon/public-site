@@ -75,12 +75,16 @@ const icons = [
     <LandingSection
       icon="i-heroicons-rocket-launch"
       description="As a developer specializing in Vue and Nuxt, I focus on creating efficient, scalable web solutions that prioritize user experience."
+      :ui=" {
+        wrapper: 'pb-0 sm:pb-0',
+
+      }"
     >
       <template #title>
         <span
-          class="text-4xl gap-2 flex flex-col font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl lg:text-5xl"
+          class=" gap-2 flex flex-col whitespace-break-spaces"
         >
-          Hello, My name is Rodion
+          Hello, my name is&nbsp;Rodion
           <span>
             I am a Frontend Developer
           </span>
