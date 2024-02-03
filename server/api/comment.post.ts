@@ -9,7 +9,6 @@ export default eventHandler(async (event) => {
   }).parse)
   const { user } = await requireUserSession(event)
 
-  await prisma.comment.deleteMany()
   if (!user) {
     setResponseStatus(event, 422)
     return {
