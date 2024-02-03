@@ -12,6 +12,8 @@ useServerSeoMeta({
 </script>
 
 <template>
+  <NuxtLoadingIndicator />
+
   <MainHeader />
   <div class="min-h-[calc(100vh-60px)]">
     <NuxtPage />
@@ -26,4 +28,5 @@ useServerSeoMeta({
       </p>
     </template>
   </MainFooter>
+  <UNotifications />
 </template>

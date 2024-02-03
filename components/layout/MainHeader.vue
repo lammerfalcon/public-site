@@ -1,6 +1,8 @@
 <script setup>
 import ColorModeButton from '~/components/colorMode/ColorModeButton.vue'
 
+const { loggedIn, clear } = useUserSession()
+const router = useRouter()
 const links = [
   {
     label: 'About',
@@ -19,6 +21,11 @@ const links = [
     label: 'Socials',
     icon: 'i-heroicons-book-open',
     to: '/socials',
+  },
+  {
+    label: 'Comments',
+    icon: 'i-heroicons-book-open',
+    to: '/comments',
   },
 ]
 </script>
@@ -58,8 +65,15 @@ const links = [
         </ul>
       </div>
       <div class="flex items-center justify-end lg:flex-1 gap-1.5">
-        <!--        <ColorModeToggle></ColorModeToggle> -->
         <ColorModeButton />
+        <div v-if="router.currentRoute.value.path === '/comments'">
+          <UButton v-if="loggedIn" color="gray" @click="clear">
+            Logout
+          </UButton>
+          <UButton v-else icon="i-simple-icons-github" color="gray" to="/auth/github" external>
+            Login with GitHub
+          </UButton>
+        </div>
       </div>
     </UContainer>
   </header>

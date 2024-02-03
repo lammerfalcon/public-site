@@ -28,6 +28,10 @@ const props = defineProps({
     type: String as PropType<typeof uiColors[number]>,
     default: 'primary',
   },
+  glow: {
+    type: Boolean,
+    default: true,
+  },
   orientation: {
     type: String as PropType<'vertical' | 'horizontal'>,
     default: 'vertical',
@@ -63,9 +67,10 @@ const config = computed(() => {
     props.orientation === 'vertical' && 'flex flex-col',
     !!slots.default && props.orientation === 'horizontal' && 'grid lg:grid-cols-2 lg:items-center',
   )
+  const backgroundGradient = props.glow ? 'background-gradient' : ''
 
   return {
-    wrapper: 'relative group isolate rounded-xl background-gradient ring-1 ring-gray-200 dark:ring-gray-800 before:hidden before:lg:block before:absolute before:-inset-[2px] before:h-[calc(100%+4px)] before:w-[calc(100%+4px)] before:z-[-1] before:rounded-[13px] flex-1 flex flex-col shadow',
+    wrapper: `relative group isolate rounded-xl ${backgroundGradient} ring-1 ring-gray-200 dark:ring-gray-800 before:hidden before:lg:block before:absolute before:-inset-[2px] before:h-[calc(100%+4px)] before:w-[calc(100%+4px)] before:z-[-1] before:rounded-[13px] flex-1 flex flex-col shadow`,
     to: 'hover:ring-primary-500 dark:hover:ring-primary-400 transition-shadow duration-200',
     base: 'flex-1 flex flex-col overflow-hidden',
     container: '',
