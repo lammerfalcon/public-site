@@ -22,11 +22,11 @@ const links = [
     icon: 'i-heroicons-book-open',
     to: '/socials',
   },
-  // {
-  //   label: 'Comments',
-  //   icon: 'i-heroicons-book-open',
-  //   to: '/comments',
-  // },
+  {
+    label: 'Comments',
+    icon: 'i-heroicons-book-open',
+    to: '/comments',
+  },
 ]
 </script>
 
