@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     'nuxt-auth-utils',
     '@nuxtjs/seo',
     '@nuxt/content',
+    '@nuxthq/studio',
   ],
   colorMode: {
     preference: 'system',
