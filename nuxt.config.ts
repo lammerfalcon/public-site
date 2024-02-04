@@ -2,7 +2,16 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxt/ui', '@nuxtjs/google-fonts', 'nuxt-icon', '@nuxt/image', 'nuxt-og-image', 'nuxt-auth-utils', '@nuxtjs/seo'],
+  modules: [
+    '@nuxt/ui',
+    '@nuxtjs/google-fonts',
+    'nuxt-icon',
+    '@nuxt/image',
+    'nuxt-og-image',
+    'nuxt-auth-utils',
+    '@nuxtjs/seo',
+    '@nuxt/content',
+  ],
   colorMode: {
     preference: 'system',
   },

@@ -13,7 +13,7 @@ const links = [
   // {
   //   label: 'Blog(soon)',
   //   icon: 'i-heroicons-book-open',
-  //   disabled: true,
+  //   disabled: false,
   //   to: '/blog',
   // },
 

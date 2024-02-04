@@ -2,14 +2,13 @@
 definePageMeta({
   title: 'Blog',
 })
-defineOgImageScreenshot()
 
-navigateTo('/')
+defineOgImageScreenshot()
 </script>
 
 <template>
   <UContainer>
-    blog
+    <ContentDoc />
   </UContainer>
 </template>
 
