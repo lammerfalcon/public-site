@@ -7,6 +7,22 @@ const otherComments = computed(() => data.value?.comments.filter(c => c.author !
 const userComment = computed(() => data.value?.comments.find(c => c.author === user.value?.username))
 const userCommentBody = ref(userComment.value?.body || '')
 const editing = ref(userCommentBody.value === '')
+defineOgImageScreenshot()
+
+definePageMeta({
+  title: 'Comments',
+})
+useSeoMeta({
+  twitterTitle: 'Rodion Gavrilov | Comments',
+  twitterDescription: 'Feel free to leave a comment',
+  twitterCard: 'summary',
+})
+
+useHead({
+  htmlAttrs: {
+    lang: 'en',
+  },
+})
 
 async function saveComment() {
   if (!userCommentBody.value.trim())

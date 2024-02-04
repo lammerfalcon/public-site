@@ -2,12 +2,15 @@
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxt/ui', '@nuxtjs/google-fonts', 'nuxt-icon', '@nuxt/image', 'nuxt-og-image', 'nuxt-auth-utils'],
+  modules: ['@nuxt/ui', '@nuxtjs/google-fonts', 'nuxt-icon', '@nuxt/image', 'nuxt-og-image', 'nuxt-auth-utils', '@nuxtjs/seo'],
   colorMode: {
     preference: 'system',
   },
   site: {
     url: 'https://rodiongavrilov.com/',
+    name: 'Rodion Gavrilov',
+    description: 'Developing Accessible and Responsive Web Applications with Modern Tech',
+    defaultLocale: 'en',
   },
   ui: {
     icons: ['logos', 'simple-icons', 'mdi', 'majesticons', 'formkit'],

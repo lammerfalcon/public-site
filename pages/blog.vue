@@ -2,6 +2,8 @@
 definePageMeta({
   title: 'Blog',
 })
+defineOgImageScreenshot()
+
 navigateTo('/')
 </script>
 

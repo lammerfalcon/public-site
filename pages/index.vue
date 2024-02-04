@@ -6,6 +6,11 @@ defineOgImageScreenshot()
 definePageMeta({
   title: 'About',
 })
+useSeoMeta({
+  twitterTitle: 'Rodion Gavrilov | About',
+  twitterDescription: 'Frontend Developer specializing in Vue and Nuxt',
+  twitterCard: 'summary',
+})
 const icons = [
   {
     name: 'i-logos-javascript',

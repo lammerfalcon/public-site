@@ -10,12 +10,12 @@ const links = [
     to: '/',
 
   },
-  {
-    label: 'Blog(soon)',
-    icon: 'i-heroicons-book-open',
-    disabled: true,
-    to: '/blog',
-  },
+  // {
+  //   label: 'Blog(soon)',
+  //   icon: 'i-heroicons-book-open',
+  //   disabled: true,
+  //   to: '/blog',
+  // },
 
   {
     label: 'Socials',
@@ -32,7 +32,7 @@ const links = [
 
 <template>
   <header class="bg-background/75 backdrop-blur  -mb-px sticky top-0 z-50">
-    <UContainer class="flex items-center justify-between gap-3 h-[60px]">
+    <UContainer class="flex  items-center justify-between gap-3 h-[60px]">
       <div class="lg:flex-1 flex items-center gap-1.5">
         <NuxtLink
           aria-label="logo" to="/"
@@ -49,7 +49,7 @@ const links = [
         </NuxtLink>
       </div>
       <div>
-        <ul class="flex items-center gap-x-8">
+        <ul class="flex items-center gap-x-5 md:gap-x-8">
           <li v-for="(link, index) in links" :key="index" :class="link.disabled ? 'cursor-not-allowed' : ''">
             <NuxtLink
               rel="''" active-class="text-primary" inactive-class="hover:text-primary "
@@ -68,10 +68,11 @@ const links = [
         <ColorModeButton />
         <div v-if="router.currentRoute.value.path === '/comments'">
           <UButton v-if="loggedIn" color="gray" @click="clear">
-            Logout
+            <span class="hidden md:block">Logout</span>
+            <UIcon name="i-mdi-logout" />
           </UButton>
           <UButton v-else icon="i-simple-icons-github" color="gray" to="/auth/github" external>
-            Login with GitHub
+            <span class="hidden md:block">Login with GitHub</span>
           </UButton>
         </div>
       </div>

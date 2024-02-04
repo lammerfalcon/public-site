@@ -2,8 +2,15 @@
 import SocialsSection from '~/components/socials/SocialsSection.vue'
 import LandingSection from '~/components/landing/LandingSection.vue'
 
+defineOgImageScreenshot()
+
 definePageMeta({
   title: 'Socials',
+})
+useSeoMeta({
+  twitterTitle: 'Rodion Gavrilov | Socials',
+  twitterDescription: 'Feel free to contact me',
+  twitterCard: 'summary',
 })
 </script>
 

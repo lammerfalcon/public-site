@@ -9,6 +9,20 @@ useServerSeoMeta({
   ogDescription: 'Creating efficient, scalable web solutions that prioritize user experience',
   twitterCard: 'summary_large_image',
 })
+useHead({
+  htmlAttrs: {
+    lang: 'en',
+  },
+})
+useHead({
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: '/favicon.png',
+    },
+  ],
+})
 </script>
 
 <template>
