@@ -7,7 +7,7 @@ defineOgImageScreenshot()
 </script>
 
 <template>
-  <UContainer>
+  <UContainer class="prose prose-primary dark:prose-invert md:mt-10 mt-4">
     <ContentDoc />
   </UContainer>
 </template>
