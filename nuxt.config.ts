@@ -13,9 +13,12 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxthq/studio',
   ],
+
   colorMode: {
     preference: 'system',
   },
+  css: ['~/assets/css/main.css'],
+
   site: {
     url: 'https://rodiongavrilov.com/',
     name: 'Rodion Gavrilov',
@@ -41,7 +44,7 @@ export default defineNuxtConfig({
     preconnect: true,
     preload: true,
     families: {
-      Roboto: {
+      Karla: {
         wght: [400, 600, 700],
         ital: [200, 400, 600, 700],
       },
