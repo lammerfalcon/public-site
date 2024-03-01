@@ -41,7 +41,7 @@ export default defineNuxtConfig({
     preconnect: true,
     preload: true,
     families: {
-      Karla: {
+      Roboto: {
         wght: [400, 600, 700],
         ital: [200, 400, 600, 700],
       },
