@@ -243,7 +243,7 @@ const icons = [
             <UIcon class="text-primary" name="i-mdi-location" />
           </div>
           <SocialsSection />
-          <div>Hobbies: cooking 🍳, guitar 🎸, video games 🎮, travelling ✈️, mechanical keyboards ⌨️</div>
+          <div>Hobbies:  🍳 — cooking, 🎸 — guitar, 🎮 — video games, ✈️ — travelling, ⌨️ — mechanical keyboards</div>
         </div>
       </template>
     </LandingSection>
