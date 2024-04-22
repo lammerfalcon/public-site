@@ -12,11 +12,8 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     '@nuxt/content',
     '@nuxthq/studio',
-    'nuxt-cron',
   ],
-  cron: {
-    runOnInit: true,
-  },
+
   colorMode: {
     preference: 'system',
   },
