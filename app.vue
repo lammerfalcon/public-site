@@ -3,10 +3,10 @@ import MainHeader from '~/components/layout/MainHeader.vue'
 import MainFooter from '~/components/layout/MainFooter.vue'
 
 useServerSeoMeta({
-  title: 'Rodion Gavrilov',
-  ogTitle: 'Rodion Gavrilov',
-  description: 'Creating efficient, scalable web solutions that prioritize user experience',
-  ogDescription: 'Creating efficient, scalable web solutions that prioritize user experience',
+  title: 'Frontend Developer Limassol | Nuxt 3 Developer | Rodion Gavrilov',
+  ogTitle: 'Frontend Developer Limassol | Nuxt 3 Developer | Rodion Gavrilov',
+  description: 'Frontend developer based in Limassol specializing in Nuxt 3. Creating efficient, scalable web solutions that prioritize user experience.',
+  ogDescription: 'Frontend developer based in Limassol specializing in Nuxt 3. Creating efficient, scalable web solutions that prioritize user experience.',
   twitterCard: 'summary_large_image',
 })
 useHead({
