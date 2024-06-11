@@ -289,6 +289,17 @@ const fillColor = computed(() => {
       </LandingCard>
     </LandingGrid>
 
+    <LandingSection title="I can build app for you!">
+      <template #description>
+        <div class="flex flex-col gap-4 items-center">
+          <div class="flex items-center">
+            <span>
+              Contact me if you want to build a website or web application
+            </span>
+          </div>
+        </div>
+      </template>
+    </LandingSection>
     <LandingSection title="Additional info">
       <template #description>
         <div class="flex flex-col gap-4 items-center">
