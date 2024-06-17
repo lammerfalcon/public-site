@@ -138,6 +138,26 @@ const fillColor = computed(() => {
     <LandingGrid>
       <LandingCard
         class="col-span-6 row-span-2" icon="i-heroicons-swatch"
+        description="Owner | Telegram e-commerce constructor"
+      >
+        <template #icon>
+          <div class="text-3xl font-extrabold">
+            Go`Store
+          </div>
+        </template>
+        <template #title>
+          <NuxtLink class="hover:text-primary flex gap-1 items-center" to="https://go-store.space/">
+            <span>GoSore</span>
+
+            <UIcon
+              class="text-xs"
+              name="i-formkit-linkexternal"
+            />
+          </NuxtLink>
+        </template>
+      </LandingCard>
+      <LandingCard
+        class="col-span-6 row-span-2" icon="i-heroicons-swatch"
         description="Advertising SaaS — Architecture — Deep refactoring — Performance optimization"
       >
         <template #icon>
